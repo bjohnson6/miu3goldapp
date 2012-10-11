@@ -38,7 +38,7 @@
          <!--Add image here-->
 <!--          <div data-role="content"> -->
             
-             <li><a href="#additem"><img src="images/puppylove2.png" alt="Logo"></a></li>
+             <li><a href="#addamoment"><img src="images/puppylove2.png" alt="Logo"></a></li>
         
  <!--         </div> -->
       
@@ -238,47 +238,102 @@
            </ul>		
 	</div><!-- /content -->
 
-	<div data-role="footer" data-position="fixed">
+	  <div data-role="footer" data-position="fixed">
 		 <div data-role="navbar">
 	             <ul>
 		            <li><a href="#home" data-icon="home">Home</a></li>
 	              </ul>
-             </div><!-- /navbar -->
-         </div><!--/footer-->    
+         </div><!-- /navbar -->
+       </div><!--/footer-->    
      </div>
 
-     <!--additempage-->
-         <div data-role="page" id="additem" date-add-back-btn="true" >
+     <!--Start of additempage-->
+         <div data-role="page" id="addamoment" data-add-back-btn="true" >
 
          	   <div data-role="header" data-position="fixed">
-         	   	  <hi>Add Moment</hi>
-         	   </div>	
+         	   	  <h1>Add A Moment</h1>
+         	   </div>	<!--/header-->
        
            
-     <!--ADD ITEM FORM-->
+     <!--ADD Moment FORM-->
          <div data-role="content">
 
-         	<form action="" method="post" id="additemform">
+         	<form action="" method="post" id="addmomentform">
+         		<!--Add select here here-->
+         	  <div data-role="fieldcontain">
+         	  	   <label for="Add A Moment">Choose A Moment</label>
+         	  	   <select name="Choose A Moment" id="Choose A Moment" data-native-menu="false">
+         	  	   	  <option data-placeholder="true">Please Select One</option>
+         	  	   	  <optgroup label="Choose A Moment">      
+         	  	   	     <option value="First Met">First Met</option>
+         	  	   	     <option value="First Date">First Date</option>
+         	  	   	     <option value="First Kiss">First Kiss</option>
+         	  	   	     <option value="First Said I Love You!">First Said I Love You!</option>
+         	  	   	      <option value="Our Song">Our Song</option>
+         	  	   	  </optgroup>   
+         	  	   	  <optgroup label="Choose Something Else">  
+         	  	   	  	 <option value="Relationship Status">Relationship Status</option>
+                         <option value="Calculate Time together">Calculate Time Together</option>
+                         <option value="Note a Special Moment">Note a Special Moment</option>
+                      </optgroup>  
+         	  	   	</select>     
+                </div>
+            
+
+
 
          	  <div data-role="fieldcontain">
          		  <label for="name">Name:</label>
-         		  <input type="text" name="name" id="name"
+         		  <input type="text" name="name" id="name" />
          	  </div>
          	   	
               <div data-role="fieldcontain">
          		  <label for="When">When:</label>
-         		  <input type="text" name="when" id="when"
+         		  <input type="text" name="when" id="when" />
          	   </div>
 
               <div data-role="fieldcontain">
          		  <label for="What">What:</label>
-         		  <input type="text" name="what" id="what"
+         		  <input type="text" name="what" id="what" />
          	   </div>
 
                 <div data-role="fieldcontain">
          		  <label for="Where">Where:</label>
-         		  <input type="text" name="where" id="where"
+         		  <input type="text" name="where" id="where" />
          		</div>  
+                 
+                 <div data-role="fieldcontain">
+         		   	    <fieldset data-role= "controlgroup">
+         		   	    	<legend> Relationship Status:</legend>
+         		   	    	<input type="radio" value="Dating" name="status-role" id="status-role-1" />
+         		   	    	<label for="status-role-1">Dating</label>
+                            <input type="radio" value="A Couple" name="status-role" id="status-role-2" />
+                            <label for="status-role-2">A Couple</label>
+         		   	    </fieldset>
+         		      
+         	     </div>  
+
+
+
+         		 <div data-role="fieldcontain">
+         		      <label for="ratemymoment">Rate My Moment:</label>
+         		      <input type="range" name="ratemymoment" id="ratemymoment" value="0" min"0" max="10" data-highlight="true"/>
+         		</div>  
+
+                <div data-role="fieldcontain">
+         		     <label for="Note">Add Notes:</label>
+         		     <textarea></textarea>
+         		</div>  
+
+         	    <div data-role="fieldcontain">
+         		       <input type="submit" value= "Save Moment" data-theme="a" />
+         		  </div>  
+                 <div data-role="fieldcontain">
+         		       <input type="submit" value= "Reset" data-theme="d" />
+         		  </div>  
+        
+
+
 
 
 
