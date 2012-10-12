@@ -22,11 +22,12 @@ $(document).ready(function(){
 	    		myerrorslink.click();
 	    		var html ='';
 	    		for (var key in validator.submitted){
-	    		  var label =	$('label[for^="'+ key +'"]').not('[generated]');
+	    		  var label  =	$('label[for^="'+ key +'"]').not('[generated]');
                   var legend=label.closest('fieldset').find('.ui-controlgroup-label');
 	    		  var fieldName = legend.length ? legend.text() : label.text();
-             };     html +='<li>' + fieldName + '</li>';
-               $("#myerrors ul").html(html);
+                  html +='<li>' + fieldName + '</li>';
+               };   
+               $("#momenterrors ul").html(html);
 			},
 			submitHandler: function() {
 		       var data = myForm.serializeArray();
