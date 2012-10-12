@@ -13,15 +13,15 @@ var parseForm= function(data){
 $(document.ready(function(){
 
 
-		var rbform = $('#addamomentform');
+		var myForm = $('#addmomentform');
 
-		    rbform.validate({
+		    myForm.validate({
 		    
 	    	invalidHandler: function(form, validator) {
 			},
 			submitHandler: function() {
-		       var data = rbform.serializeArray();
-			    parseForm(data);
+		       var data = myForm.serializeArray();
+			    parsemyForm(data);
 	   
 	
 		}
