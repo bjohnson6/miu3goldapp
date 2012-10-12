@@ -20,7 +20,10 @@ $(document).ready(function(){
 		    
 	    	invalidHandler: function(form, validator) {
 	    		myerrorslink.click();
-	    		console.log(validator);
+	    		for (var key in validator.submitted){}
+	    		  var label=	$('label[for^="'+ key +'"]');
+                  var legend=label.closest('fieldset').find('.ui-controlgroup-label');
+	    		  var fieldName = legend.length ? legend.text() : label.text();
 			},
 			submitHandler: function() {
 		       var data = myForm.serializeArray();
