@@ -10,7 +10,7 @@ var parseForm = function(data){
 
 };
 
-$(document).ready(function(){
+$(document).on('pageinit',function(){
 
 
 		var myForm = $('#addmomentform');
