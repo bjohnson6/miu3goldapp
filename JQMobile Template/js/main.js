@@ -5,12 +5,12 @@
 // write your javascript in here
 
 
-var parseForm= function(data){
+var parseForm = function(data){
 	console.log(data);
 
 };
 
-$(document.ready(function(){
+$(document).ready(function(){
 
 
 		var myForm = $('#addmomentform');
@@ -21,7 +21,7 @@ $(document.ready(function(){
 			},
 			submitHandler: function() {
 		       var data = myForm.serializeArray();
-			    parsemyForm(data);
+			    parseForm(data);
 	   
 	
 		}
@@ -34,9 +34,10 @@ $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 });	
 		
-$('#addItem').on('pageinit', function(){
+$('#addamoment').on('pageinit', function(){
+	   delete $.validator.methods.date;
 
-		var myForm = $('#formId');
+		var myForm = $('#addmomentform');
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
 			},
