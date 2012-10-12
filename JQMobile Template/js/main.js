@@ -14,10 +14,13 @@ $(document).ready(function(){
 
 
 		var myForm = $('#addmomentform');
+		    myerrorslink=$('#myerrorslink')
 
 		    myForm.validate({
 		    
 	    	invalidHandler: function(form, validator) {
+	    		myerrorslink.click();
+	    		console.log(validator);
 			},
 			submitHandler: function() {
 		       var data = myForm.serializeArray();

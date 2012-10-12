@@ -1,3 +1,5 @@
 // write your CSS in here
 
-label.error{display:block; margin:10px 0; #cc000;}
+label.error{display:block; margin:10px 0; #cc0000;}
+
+#myerrorslink{display: none;}
